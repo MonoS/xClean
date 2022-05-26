@@ -370,7 +370,7 @@ def MvTools(c: vs.VideoNode, defH: int, thSAD: int) -> vs.VideoNode:
     fulls = GetColorRange(c) == 0
     icalc = bd < 32
     S = core.mv.Super if icalc else core.mvsf.Super
-    A = core.mv.Analyse if icalc else core.mvsf.Analyse
+    A = core.mv.Analyse if icalc else core.mvsf.Analyze
     R = core.mv.Recalculate if icalc else core.mvsf.Recalculate
 
     sc = 8 if defH > 2880 else 4 if defH > 1440 else 2 if defH > 720 else 1
